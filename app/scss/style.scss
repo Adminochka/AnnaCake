@@ -395,6 +395,9 @@
         width: 250px;
         text-align: center;
     }
+    &__btn:hover {
+        text-decoration: underline;
+    }
 }
 
 .contacts {
