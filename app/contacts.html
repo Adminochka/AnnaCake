@@ -76,12 +76,21 @@
                                 <a class="contacts__email" href="mailto:annacake.sweets.studio@gmail.com">annacake.sweets.studio@gmail.com</a>
                                 или ниже, в форму обратной связи.
                             </div>
-                            <form class="contact-form">
+                            <form action="#" class="contact-form js-contactForm">
                                 <div class="contact-form__input-inner">
-                                    <input class="contact-form__input" type="text" placeholder="Ваше имя">
-                                    <input class="contact-form__input" type="email" placeholder="Ваш email">
+                                    <input class="contact-form__input js-contactForm__input" type="text" name="name" placeholder="Ваше имя *">
+                                    <input class="contact-form__input js-contactForm__input js-contactForm__input-email" type="email" name="email" placeholder="Ваш e-mail *">
                                 </div>
-                                <textarea class="contact-form__textarea" placeholder="Не стесняйтсь, отправте сообщение"></textarea>
+                                <textarea class="contact-form__textarea js-contactForm__textarea" name="message" placeholder="Не стесняйтсь, отправте сообщение"></textarea>
+                                <div class="contact-form__checkbox-inner">
+                                    <label class="contact-form__checkbox-label">
+                                        <input type="checkbox" name="agreement" class="contact-form__checkbox-input js-contactForm__checkbox">
+                                        <span class="contact-form__checkbox-box"></span>
+                                        <span class="contact-form__checkbox-text">
+                                            Отправляя сообщение, вы соглашаетесь с <a class="contact-form__checkbox-link" href="#"> политикой конфиденциальности </a>.
+                                        </span>
+                                    </label>
+                                </div>
                                 <button class="contact-form__btn btn">Отправить</button>
                             </form>
                         </div>
