@@ -26,7 +26,7 @@
                         <ul class="menu__list">
                             <li class="menu__list-item"><a class="menu__list-link" href="category.html">Рецепты</a></li>
                             <li class="menu__list-item"><a class="menu__list-link" href="news.html">Статьи</a></li>
-                            <li class="menu__list-item"><a class="menu__list-link menu__list-link--active" href="contacts.html">Контакты</a></li>
+                            <li class="menu__list-item"><a class="menu__list-link" href="contacts.html">Контакты</a></li>
                         </ul>
                     </nav>
                     <form class="header__search">
@@ -38,69 +38,34 @@
         </header>
 
         <main class="main">
-            <div class="breadcrumbs">
-                <div class="container">
-                    <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="index.html">Главная</a></li>
-                        <li class="breadcrumbs__list-item"><span class="breadcrumbs__list-span">Контакты</span></li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="contacts-page">
+            <section class="contacts">
                 <div class="container">
                     <h2 class="title">
                         Контакты
                     </h2>
-                    <div class="author author__contacts">
-                        <div class="container">
-                            <div class="author__inner">
-                                <div class="author__content">
-                                    <p class="author__text">
-                                        Всем, привет! Меня зовут Анна. В этом блоге вы найдете подробные рецепты сладких и несладких блюд, которые каждый сможет приготовить дома. Присоединяйтесь.
-                                        Давайте вместе радовать своих любимых вкусными блюдами и десертами!
-                                    </p>
-                                    <div class="author__name">Анна Шишкина</div>
-                                </div>
-                                <div class="author__avatar">
-                                    <img class="author__avatar-img" src="images/contacts-author-anna.jpg" alt="author Anna">
-                                </div>
+                    <form id="formContact" class="contact-form">
+                        <div class="contact-form__input-inner">
+                            <div class="contact-form__control contact-form__control-input">
+                                <input class="contact-form__input" type="text" name="name" placeholder="Ваше имя *">
+                                <span class="errorMessage"></span>
+                            </div>
+                            <div class="contact-form__control contact-form__control-input">
+                                <input class="contact-form__input" type="text" name="email" placeholder="Ваш e-mail *">
+                                <span class="errorMessage"></span>
                             </div>
                         </div>
-                    </div>
-
-                    <section class="contacts">
-                        <div class="container">
-                            <div class="subtitle">
-                                Будем рады, если вы напишите мне на электронный адрес
-                                <a class="contacts__email" href="mailto:annacake.sweets.studio@gmail.com">annacake.sweets.studio@gmail.com</a>
-                                или ниже, в форму обратной связи.
-                            </div>
-                            <form id="formContact" class="contact-form">
-                                <div class="contact-form__input-inner">
-                                    <div class="contact-form__control contact-form__control-input">
-                                        <input class="contact-form__input" type="text" name="name" placeholder="Ваше имя *">
-                                        <span class="errorMessage"></span>
-                                    </div>
-                                    <div class="contact-form__control contact-form__control-input">
-                                        <input class="contact-form__input" type="text" name="email" placeholder="Ваш e-mail *">
-                                        <span class="errorMessage"></span>
-                                    </div>
-                                </div>
-                                <div class="contact-form__control">
-                                    <textarea class="contact-form__textarea" name="message" placeholder="Не стесняйтесь, отправте сообщение"></textarea>
-                                    <span class="errorMessage"></span>
-                                </div>
-                                <button class="contact-form__btn btn">Отправить</button>
-                                <div class="contact-form__konfidentsialnost">
-                                    Отправляя сообщение, вы соглашаетесь с <a class="contact-form__konfidentsialnost-link" href="#"> политикой конфиденциальности </a>.
-                                </div>
-                            </form>
+                        <div class="contact-form__control">
+                            <textarea class="contact-form__textarea" name="message" placeholder="Не стесняйтесь, отправте сообщение"></textarea>
+                            <span class="errorMessage"></span>
                         </div>
-                    </section>
+                        <button class="contact-form__btn btn">Отправить</button>
+                        <div class="contact-form__konfidentsialnost">
+                            Отправляя сообщение, вы соглашаетесь с <a class="contact-form__konfidentsialnost-link" href="#"> политикой конфиденциальности </a>.
+                        </div>
+                    </form>
                 </div>
-            </div>
-
+            </section>
         </main>
 
         <footer class="footer">
@@ -144,6 +109,7 @@
         </footer>
     </div>
 
+    <script src="js/formContact.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>

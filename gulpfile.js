@@ -66,6 +66,7 @@ function build() {
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/images/**/*',
+        'app/js/**/formContact.js',
         'app/js/main.min.js',
         'app/*.html'
     ], {base: 'app'})

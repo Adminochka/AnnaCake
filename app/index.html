@@ -226,22 +226,25 @@
                         <a class="contacts__email" href="mailto:annacake.sweets.studio@gmail.com">annacake.sweets.studio@gmail.com</a>
                         или ниже, в форму обратной связи.
                     </div>
-                    <form action="#" class="contact-form js-contactForm">
+                    <form id="formContact" class="contact-form">
                         <div class="contact-form__input-inner">
-                            <input class="contact-form__input js-contactForm__input" type="text" name="name" placeholder="Ваше имя *">
-                            <input class="contact-form__input js-contactForm__input js-contactForm__input-email" type="email" name="email" placeholder="Ваш e-mail *">
+                            <div class="contact-form__control contact-form__control-input">
+                                <input class="contact-form__input" type="text" name="name" placeholder="Ваше имя *">
+                                <span class="errorMessage"></span>
+                            </div>
+                            <div class="contact-form__control contact-form__control-input">
+                                <input class="contact-form__input" type="text" name="email" placeholder="Ваш e-mail *">
+                                <span class="errorMessage"></span>
+                            </div>
                         </div>
-                        <textarea class="contact-form__textarea js-contactForm__textarea" name="message" placeholder="Не стесняйтесь, отправте сообщение"></textarea>
-                        <div class="contact-form__checkbox-inner">
-                            <label class="contact-form__checkbox-label">
-                                <input type="checkbox" name="agreement" class="contact-form__checkbox-input js-contactForm__checkbox" checked>
-                                <span class="contact-form__checkbox-box"></span>
-                                <span class="contact-form__checkbox-text">
-                                    Отправляя сообщение, вы соглашаетесь с <a class="contact-form__checkbox-link" href="#"> политикой конфиденциальности </a>.
-                                </span>
-                            </label>
+                        <div class="contact-form__control">
+                            <textarea class="contact-form__textarea" name="message" placeholder="Не стесняйтесь, отправте сообщение"></textarea>
+                            <span class="errorMessage"></span>
                         </div>
                         <button class="contact-form__btn btn">Отправить</button>
+                        <div class="contact-form__konfidentsialnost">
+                            Отправляя сообщение, вы соглашаетесь с <a class="contact-form__konfidentsialnost-link" href="#"> политикой конфиденциальности </a>.
+                        </div>
                     </form>
                 </div>
             </section>
@@ -271,8 +274,8 @@
                     </div>
                     <form class="contact-form contact-form--footer">
                         <div class="contact-form__input-inner">
-                            <input class="contact-form__input" type="text" placeholder="Ваше имя">
-                            <input class="contact-form__input" type="email" placeholder="Ваш email">
+                            <input class="contact-form__input contact-form__input--footer" type="text" placeholder="Ваше имя">
+                            <input class="contact-form__input contact-form__input--footer" type="email" placeholder="Ваш email">
                         </div>
                         <textarea class="contact-form__textarea contact-form__textarea--footer" placeholder="Не стесняйтсь, отправте сообщение"></textarea>
                         <button class="contact-form__btn contact-form__btn--footer btn">Отправить</button>
@@ -288,6 +291,7 @@
         </footer>
     </div>
 
+    <script src="js/formContact.js"></script>
     <script src="js/main.min.js"></script>
 </body>
 </html>

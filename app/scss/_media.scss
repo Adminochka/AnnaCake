@@ -85,7 +85,7 @@
             flex-wrap: wrap;
             gap: 0;
         }
-        &__input {
+        &__control-input {
             width: 100%;
         }
     }
@@ -725,6 +725,10 @@
         &__checkbox-label {
             font-size: 12px;
         }
+    }
+    .errorMessage {
+        padding-left: 12px;
+        font-size: 12px;
     }
     .top {
         margin-bottom: 40px;

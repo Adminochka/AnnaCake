@@ -7,59 +7,78 @@ $(function (){
 
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
 
-    let contactForm = document.querySelector('.js-contactForm');
-    let contactFormInputs = document.querySelectorAll('.js-contactForm__input');
-    let contactFormTextarea = document.querySelectorAll('.js-contactForm__textarea');
-    let contactFormEmail = document.querySelector('.js-contactForm__input-email');
-    let contactFormCheckbox = document.querySelector('.js-contactForm__checkbox');
+//     const formContact = document.getElementById('formContact');
+//     const nameForm = formContact.querySelector('[name="name"]');
+//     const emailForm = formContact.querySelector('[name="email"]');
+//     const messageForm = formContact.querySelector('[name="message"]');
 
-    function validateEmail(email) {
-        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
+//     const emailRegexp = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+//     // const emailRegexp = new RegExp(/^[^ ]+@[^ ]+\.[a-z]{2,3}$/);
 
-    contactForm.onsubmit = function () {
+//     function validateName (value) {
+//         if (value === "") {
+//             return "Введите имя";
+//         }
+//     }
 
-        let contactFormEmailVal = contactFormEmail.value;
-        emptyInputs = Array.from(contactFormInputs).filter(input => input.value === '');
+//     function validateEmail (value) {
+//         if (value === "") {
+//             return "Введите e-mail";
+//         }
+//         if(emailRegexp.test(value) === false) {
+//             return "Введите корректный e-mail"
+//         }
+//     }
 
-        contactFormInputs.forEach( function (input) {
-            if (input.value === '') {
-                input.classList.add('error');
-            } else {
-                input.classList.remove('error');
-            }
-        });
+//     function validateMessage (value) {
+//         if (value === "") {
+//             return "Введите сообщение";
+//         }
+//     }
 
-        contactFormTextarea.forEach( function (textarea) {
-            if (textarea.value === '') {
-                textarea.classList.add('error');
-            } else {
-                textarea.classList.remove('error');
-            }
-        });
+//     const formElements = {
+//         "name"    : formContact.querySelector('[name="name"]'),
+//         "email"   : formContact.querySelector('[name="email"]'),
+//         "message" : formContact.querySelector('[name="message"]'),
+//     }
 
-        if (emptyInputs.length !== 0) {
-            console.log('inputs not filled');
-            return false;
-        }
+//     function renderErrors(errors) {
 
-        if(!validateEmail(contactFormEmailVal)) {
-            console.log('email not valid');
-            contactFormEmail.classList.add('error');
-            return false;
-        } else {
-            contactFormEmail.classList.remove('error');
-        }
+//         Object.keys(errors).forEach((elenent) => {
+//             const parent = formElements[elenent].parentElement;
+//             const errorMessage = parent.querySelector('.errorMessage');
+//             if(errors[elenent]) {
+//                 formElements[elenent].classList.add('error');
+//                 errorMessage.innerText = errors[elenent];
+//             } else {
+//                 formElements[elenent].classList.remove('error');
+//                 errorMessage.innerText = '';
+//             }
+//         });
+//     }
 
-        if(!contactFormCheckbox.checked) {
-            console.log('checkbox not checked');
-            contactFormCheckbox.classList.add('error');
-            return false;
-        } else {
-            contactFormCheckbox.classList.remove('error')
-        }
-    }
-});
+//     function checkForm() {
+
+//         const errors = {
+//             "name"    : validateName(nameForm.value),
+//             "email"   : validateEmail(emailForm.value),
+//             "message" : validateMessage(messageForm.value),
+//         };
+
+//         renderErrors(errors);
+
+//         return Object.values(errors).some((el) => Boolean(el));
+//     }
+
+//     formContact.addEventListener('blur', checkForm, true);
+
+//     formContact.addEventListener('submit', function(event) {
+
+//         if ( checkForm() === true) {
+//             event.preventDefault();
+//         }
+//     });
+
+// });
