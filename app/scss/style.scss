@@ -207,6 +207,7 @@
     background-color: $color-write;
     border-top: 1px solid $color-border;
     box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 20%);
+    color: $color-base;
     &__top {
         display: flex;
         justify-content: space-between;
@@ -215,6 +216,7 @@
     &__logo {
         display: block;
         max-width: 150px;
+        margin-right: 100px;
     }
     &__logo-img {
         width: 100%;
@@ -245,6 +247,40 @@
     }
     &__email {
         color: $color-base;
+    }
+}
+
+.language {
+    &--footer {
+        margin-left: auto;
+    }
+    &__item {
+        margin-bottom: 7px;
+    }
+    &__link {
+        position: relative;
+        padding-left: 20px;
+        color: $color-base;
+    }
+    &__link::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 1px;
+        width: 13px;
+        height: 9px;
+        border-bottom: 2px solid $color-base;
+        border-right: 2px solid $color-base;
+        transform: rotate(45deg);
+    }
+    &__link--active,
+    &__link:hover {
+        color: $color-hover;
+    }
+    &__link--active::before,
+    &__link:hover.language__link::before {
+        border-bottom: 2px solid $color-hover;
+        border-right: 2px solid $color-hover;
     }
 }
 

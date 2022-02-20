@@ -4,7 +4,7 @@
             flex-wrap: wrap;
         }
         &__logo-inner {
-            width: 100%;
+            // width: 100%;
             margin-bottom: 30px;
         }
     }
@@ -35,20 +35,6 @@
         }
     }
 }
-
-// @media (max-width: 920px) {
-//     .news-page {
-//         &__info {
-//             height: 370px;
-//         }
-//     }
-//     .recipe {
-//         &__info {
-//             height: 370px;
-//         }
-//     }
-// }
-
 
 @media (max-width: 820px) {
     .title {
@@ -285,19 +271,9 @@
         }
     }
     .footer {
-        &__top {
-            display: block;
-        }
-        &__logo {
-            width: 140px;
-            margin: 0 auto;
-        }
-        &__menu {
-            max-width: 450px;
-            margin: 0 auto 30px;
-        }
-        &__menu-list {
-            column-gap: 10px;
+        &__logo-inner {
+            width: 100%;
+            margin-bottom: 30px;
         }
     }
     .contact-form {
@@ -394,6 +370,26 @@
 }
 
 @media (max-width: 620px) {
+    .footer {
+        &__top {
+            display: block;
+        }
+        &__logo {
+            width: 140px;
+            margin: 0 auto;
+        }
+        &__menu {
+            max-width: 450px;
+            margin: 0 auto 30px;
+        }
+        &__menu-list {
+            column-gap: 10px;
+        }
+    }
+    .language {
+        display: flex;
+        justify-content: center;
+    }
     .top {
         &__inner {
             min-height: 280px;
@@ -703,6 +699,17 @@
         }
         &__logo-inner {
             margin-bottom: 20px;
+        }
+    }
+    .language {
+        &__link {
+            padding-left: 18px;
+        }
+        &__link::before {
+            top: 4px;
+            left: 1px;
+            width: 11px;
+            height: 7px;
         }
     }
     .contact-form {
